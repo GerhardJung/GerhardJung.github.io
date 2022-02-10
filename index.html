@@ -8,7 +8,43 @@ body {
 }
 
 table {
-  border-spacing: 2cm;
+  border-collapse: separate;
+  border-spacing: 150px 20px;
+}
+
+td {
+  padding: 10px;
+}
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  background: white;
+  padding: 5px;
+  width: 600px;
+  height: 550px;
+  margin-top: 20px;
+  line-height: 45px;
+  color: black;
+  text-align: center;
 }
 
 .topnav {
@@ -49,7 +85,7 @@ table {
 
 <center><table COLS=2 WIDTH="90%" NOSAVE ><tr>
 
-<td><img SRC="/pictures/jung_gerhard.jpg" height=290 align=right></td>
+<td><img SRC="/pictures/jung_gerhard.jpg" height=350 align=right></td>
 
 <td> 
 <br><br>
@@ -64,55 +100,47 @@ table {
 <br><br>Collaborator of the Simons Collaboration on <a href="https://scglass.uchicago.edu/">Cracking the 
 Glass Problem</a>
 </td>
-
 </tr></table></center>
 
+<br>
+<br>
+<div style = "position:absolute; left:120px;"><b><font color="#0020AD"><font size=+2>Research Interests</font></font></b></div>  
+<br> <br><br>
 
-<div style = "position:relative; left:120px;"><b><font color="#0020AD"><font size=+2>Research Interests</font></font></b></div>  
 
-<center><table COLS=2 WIDTH="70%" NOSAVE >
-
-<tr>
-<td><a href="/html/projects.html#GT"><b><font color="#0020AD"><font size=+1>Glass Transition</font></font></b></a> <br><br> 
-<div style="text-align: left;"><img SRC="/pictures/glass.png" width=390></div><br>  <br>  
-<strong>Source</strong>: Snapshot with Ovito (<a href="https://www.ovito.org/">http://dynamomd.org/</a>)
-</td>
-
-<td><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Dynamic Coarse-Graining</font></font></b></a> <br><br> 
-<img SRC="/pictures/gld.png" width=590><br>  <br>  
-</td>
-</tr>
-
-<tr>
-<td><a href="/html/projects.html#CONFINE"><b><font color="#0020AD"><font size=+1>Confinement</font></font></b></a> <br><br> 
-<img SRC="/pictures/slit.png" width=490><br>  <br>  
-<strong>Source</strong>: Snapshot with DynamO (<a href="http://dynamomd.org/">http://dynamomd.org/</a>)
-</td>
-
-<td><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Non-Markovian Dynamics</font></font></b></a> <br><br> 
+<ul class="flex-container">
+ <li class="flex-item">
+  	<a href="/html/projects.html#GT"><b><font color="#0020AD"><font size=+1>Glass Transition</font></font></b></a> 
+	<div style="text-align: center;"><img SRC="/pictures/glass.png" width=440></div>
+	Source: Snapshot with <a href="https://www.ovito.org/"><font color="#0020AD"><font size=+0>Ovito</font></font></a>
+ </li>
+ <li class="flex-item"><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Dynamic Coarse-Graining</font></font></b></a> 
+	<img SRC="/pictures/gld.png" width=590> 
+</li>
+ <li class="flex-item"><a href="/html/projects.html#CONFINE"><b><font color="#0020AD"><font size=+1>Confinement</font></font></b></a> <br><br> 
+<img SRC="/pictures/slit.png" width=590 ><br>  
+<strong>Source</strong>: Snapshot with <a href="http://dynamomd.org/">Dynamo</a>
+</li>
+ <li class="flex-item"><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Non-Markovian Dynamics</font></font></b></a> <br><br> 
 <img SRC="/pictures/backflow_animation.gif" width=590><br>  <br>  
-</td>
-</tr>
-
-<tr>
-<td><a href="/html/projects.html#NED"><b><font color="#0020AD"><font size=+1>Non-Equilibrium Dynamics</font></font></b></a> <br><br> 
-<img SRC="/pictures/FDT.png" width=390><br>  <br>  
- </td>
-
-<td><b><font color="#0020AD"><font size=+1>Other Topics</font></font></b>  <br><br> 
+</li>
+ <li class="flex-item"><a href="/html/projects.html#NED"><b><font color="#0020AD"><font size=+1>Non-Equilibrium Dynamics</font></font></b></a> <br><br> 
+<img SRC="/pictures/FDT.png" width=450>
+</li>
+ <li class="flex-item"><b><font color="#0020AD"><font size=+1>Other Topics</font></font></b>  <br><br> 
 <ul>
   <li>Fluctuation-Dissipation Theorems</li>
   <li>Hydrodynamics</li>
   <li>Rheology</li>
 </ul>  
-</td>
-</tr>
-
-</table></center>
+</li>
+</ul>
 
 
-<div style = "position:relative; left:120px;"><b><font color="#0020AD"><font size=+2>Recent Publications</font></font></b>  <br><br> </div>  
-<div style = "position:relative; left:220px;"><ul>
+<br><br>
+
+<div style = "position:absolute; left:120px;"><b><font color="#0020AD"><font size=+2>Recent Publications</font></font></b>   </div>  <br><br>
+<div style = "position:absolute; left:220px;"><ul>
   <li>G. Jung<br><em> Non-Markovian systems out of equilibrium: Exact results for two routes of coarse graining</em><br> <a href="https://arxiv.org/abs/2111.13153">https://arxiv.org/abs/2111.13153</a>
   </li><br>
     <li>V. Klippenstein, M. Tripathy, G. Jung, F. Schmid, N. van der Vegt<br><em> Introducing memory in coarse-grained molecular simulations (Review Article, Open Access)</em><br> <a href="doi:10.1021/acs.jpcb.1c01120">doi:10.1021/acs.jpcb.1c01120</a>

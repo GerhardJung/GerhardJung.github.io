@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 150px 20px;
+}
+
+td {
+  padding: 10px;
+}
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  background: white;
+  padding: 5px;
+  width: 600px;
+  height: 550px;
+  margin-top: 20px;
+  line-height: 45px;
+  color: black;
+  text-align: center;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="/">Home</a>
+  <a href="/html/projects.html">Projects</a>
+  <a href="/html/CV.html">CV</a>
+  <a href="/html/publications.html">Publications</a>
+</div>
+
+<br><br>
+
+<center><table COLS=2 WIDTH="90%" NOSAVE ><tr>
+
+<td><img SRC="/pictures/jung_gerhard.jpg" height=350 align=right></td>
+
+<td> 
+<br><br>
+<b><font color="#0020AD"><font size=+3>Gerhard Jung</font></font></b>  
+<br>
+<br> PostDoc at <a href="http://www.cnrs.fr">CNRS</a><br>
+<br> Mail: <a HREF="mailto:jung.gerhard@umontpellier.fr">jung.gerhard@umontpellier.fr</a>
+<br><br><a href="http://www.coulomb.umontpellier.fr/">Laboratoire Charles Coulomb</a>, UMR 5221
+<br><a href="http://www.umontpellier.fr">Universite de Montpellier</a>
+<br>  Place Eugene Bataillon
+<br>  34095 Montpellier Cedex 5, France
+<br><br>Collaborator of the Simons Collaboration on <a href="https://scglass.uchicago.edu/">Cracking the 
+Glass Problem</a>
+</td>
+
+</tr></table></center>
+<br>
+<br>
+<div style = "position:relative; left:120px;"><b><font color="#0020AD"><font size=+2>Research Interests</font></font></b></div>  
+<br>
+
+
+<ul class="flex-container">
+ <li class="flex-item">
+  	<a href="/html/projects.html#GT"><b><font color="#0020AD"><font size=+1>Glass Transition</font></font></b></a> 
+	<div style="text-align: center;"><img SRC="./pictures/glass.png" width=440></div>
+	Source: Snapshot with <a href="https://www.ovito.org/"><font color="#0020AD"><font size=+0>Ovito</font></font></a>
+ </li>
+ <li class="flex-item"><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Dynamic Coarse-Graining</font></font></b></a> 
+	<img SRC="./pictures/gld.png" width=590> 
+</li>
+ <li class="flex-item"><a href="/html/projects.html#CONFINE"><b><font color="#0020AD"><font size=+1>Confinement</font></font></b></a> <br><br> 
+<img SRC="./pictures/slit.png" width=590 ><br>  
+<strong>Source</strong>: Snapshot with <a href="http://dynamomd.org/">Dynamo</a>
+</li>
+ <li class="flex-item"><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Non-Markovian Dynamics</font></font></b></a> <br><br> 
+<img SRC="./pictures/backflow_animation.gif" width=590><br>  <br>  
+</li>
+ <li class="flex-item"><a href="/html/projects.html#NED"><b><font color="#0020AD"><font size=+1>Non-Equilibrium Dynamics</font></font></b></a> <br><br> 
+<img SRC="./pictures/FDT.png" width=450>
+</li>
+ <li class="flex-item"><b><font color="#0020AD"><font size=+1>Other Topics</font></font></b>  <br><br> 
+<ul>
+  <li>Fluctuation-Dissipation Theorems</li>
+  <li>Hydrodynamics</li>
+  <li>Rheology</li>
+</ul>  
+</li>
+
+</ul>
+
+
+<br><br>
+
+<div style = "position:relative; left:120px;"><b><font color="#0020AD"><font size=+2>Recent Publications</font></font></b>  <br><br> </div>  
+<div style = "position:relative; left:220px;"><ul>
+  <li>G. Jung<br><em> Non-Markovian systems out of equilibrium: Exact results for two routes of coarse graining</em><br> <a href="https://arxiv.org/abs/2111.13153">https://arxiv.org/abs/2111.13153</a>
+  </li><br>
+    <li>V. Klippenstein, M. Tripathy, G. Jung, F. Schmid, N. van der Vegt<br><em> Introducing memory in coarse-grained molecular simulations (Review Article, Open Access)</em><br> <a href="doi:10.1021/acs.jpcb.1c01120">doi:10.1021/acs.jpcb.1c01120</a>
+  </li><br>
+    <li>G. Jung, F. Schmid<br><em> Fluctuation-dissipation relations far from equilibrium: A case study (Open Access)</em><br> <a href="10.1039/D1SM00521A">10.1039/D1SM00521A</a>
+  </li><br>
+</ul>   </div>  
+
+</body>
+</html>
