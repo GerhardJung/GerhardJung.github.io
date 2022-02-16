@@ -7,13 +7,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.topnav {
+#navbar {
   overflow: hidden;
   background-color: #333;
 }
 
-.topnav a {
+#navbar a {
   float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -21,25 +22,41 @@ body {
   font-size: 17px;
 }
 
-.topnav a:hover {
+#navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.topnav a.active {
+#navbar a.active {
   background-color: #04AA6D;
   color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
 </style>
 </head>
 <body>
 
-<div class="topnav">
+<div id="navbar">
   <a href="/">Home</a>
   <a href="/html/projects.html">Projects</a>
   <a href="/html/CV.html">CV</a>
   <a class="active" href="/html/publications.html">Publications</a>
 </div>
+
+<div class="content">
 
 <h2><font color="#0020AD"><font size=+3>Publications</font></font></h2><br><br> 
 
@@ -62,6 +79,23 @@ body {
 <li><strong><a target="_parent" href="http://arxiv.org/abs/1709.07805">Iterative reconstruction of memory kernels </a></strong><br/> G. Jung, M. Hanke, F. Schmid, J. Chemical Theory and Computation 13, 2481 (2017). <a href="https://doi.org/10.1021/acs.jctc.7b00274">doi:10.1021/acs.jctc.7b00274</a><br/></li><br>  
 <li><strong><a target="_parent" href="http://arxiv.org/abs/1605.03011">Computing bulk and shear viscosities from simulations of fluids with dissipative and stochastic interactions </a></strong><br/> G. Jung, F. Schmid, J. Chem. Phys. 144, 204104 (2016). <a href="https://doi.org/10.1063/1.4950760" target="_parent">doi:10.1063/1.4950760 </a><br/></li>
 </ul>
+
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 
 </body>
 </html>

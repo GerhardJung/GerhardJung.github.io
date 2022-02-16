@@ -1,0 +1,137 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{eurosym}
+\usepackage{lastpage}
+\usepackage{xspace}
+\usepackage[margin=15mm,includehead,includefoot]{geometry}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage[usenames,dvipsnames,table]{xcolor}
+\usepackage{csquotes}
+\usepackage{pgfgantt}
+\usepackage[nohyperlinks,nolist]{acronym}
+\usepackage{xcolor,colortbl}
+\usepackage{makecell}
+\usepackage[multiple]{footmisc}
+\usepackage[shortlabels]{enumitem}
+\usepackage{here}
+
+% A package which allows simple repetition counts, and some useful commands
+
+\usepackage{xcolor,colortbl}
+
+% A package which allows simple repetition counts, and some useful commands
+
+\usepackage{forloop}
+\newcounter{loopcntr}
+\newcommand{\rpt}[2][1]{%
+	\forloop{loopcntr}{0}{\value{loopcntr}<#1}{#2}%
+}
+\newcommand{\on}[1][1]{
+	\forloop{loopcntr}{0}{\value{loopcntr}<#1}{&\cellcolor{lightgray}}
+}
+\newcommand{\onx}[1][1]{
+	\forloop{loopcntr}{0}{\value{loopcntr}<#1}{&\cellcolor{orange}}
+}
+\newcommand{\off}[1][1]{
+	\forloop{loopcntr}{0}{\value{loopcntr}<#1}{&}
+}
+\newcommand{\nb}[1][1]{
+	\forloop{loopcntr}{0}{\value{loopcntr}<#1}{&}
+}
+
+\definecolor{orange}{HTML}{FF7F00}
+
+\newcommand{\todo}[1] {\textcolor{red}{{#1}}}
+
+\newcommand{\gj}[1] {\textcolor{green}{{#1}}}
+\newcommand{\ph}[1] {\textcolor{blue}{{#1}}}
+\newcommand{\tf}[1] {\textcolor{brown}{{#1}}}
+
+\usepackage[compact]{titlesec}
+% HotFix from http://tex.stackexchange.com/a/300259/84485
+% Version1 of titlesec is not compatible with the latest texlive. 
+% Either the titlesec package must be updated, or the following HotFix used:
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+
+\usepackage{enumitem}
+\usepackage[style=verbose-ibid,backend=bibtex]{biblatex}
+\usepackage{hyperref}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{soul} % for smarter (word-wrapping) underlining.
+\usepackage{lineno}
+\usepackage{enumitem} % for broken enumerate in ethics section.
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\TODO}[1]{{\textcolor{red}{[\textbf{TODO:} #1]}}}
+% \titlespacing\section{0pt}{6pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+% \titlespacing\subsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+% \titlespacing\subsubsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+\let\oldfootnotesize\footnotesize
+\renewcommand{\footnotesize}{\fontsize{8bp}{1em}\selectfont}
+\renewcommand{\cite}{\autocite} % citations in footnotes
+\bibliography{bibliography}
+
+\interfootnotelinepenalty=10000
+
+\headheight=14pt
+
+% Explicitly set footnote font size to match call (i.e., 8pt).
+% Taken from http://tex.stackexchange.com/a/249422/84485
+\makeatletter
+\renewcommand\footnotesize{%
+   \@setfontsize\footnotesize\@ixpt{8}%
+   \abovedisplayskip 8\p@ \@plus2\p@ \@minus4\p@
+   \abovedisplayshortskip \z@ \@plus\p@
+   \belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+   \def\@listi{\leftmargin\leftmargini
+               \topsep 4\p@ \@plus2\p@ \@minus2\p@
+               \parsep 2\p@ \@plus\p@ \@minus\p@
+               \itemsep \parsep}%
+   \belowdisplayskip \abovedisplayskip
+}
+\makeatother
+
+\hypersetup{
+    pdftitle={CV-Jung-Gerhard},    % title
+    pdfauthor={},
+    colorlinks=true,
+    citecolor=black,
+    linkcolor=black,
+    urlcolor=blue
+  }
+
+
+% To correctly align fancy headers.
+% Courtesy of: http://tex.stackexchange.com/a/88136/84485
+\makeatletter
+\newcommand{\resetHeadWidth}{\f@nch@setoffs}
+\makeatother
+
+\makeatother
+
+
+
+\begin{document}
+
+\include{cv}
+
+\end{document}
+
+

@@ -11,13 +11,14 @@ table, th, td {
   border: 1px solid black;
 }
 
-.topnav {
+#navbar {
   overflow: hidden;
   background-color: #333;
 }
 
-.topnav a {
+#navbar a {
   float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -25,80 +26,63 @@ table, th, td {
   font-size: 17px;
 }
 
-.topnav a:hover {
+#navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.topnav a.active {
+#navbar a.active {
   background-color: #04AA6D;
   color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
 </style>
 </head>
 <body>
 
-<div class="topnav">
+<div id="navbar">
   <a href="/">Home</a>
   <a href="/html/projects.html">Projects</a>
   <a class="active" href="/html/CV.html">CV</a>
   <a href="/html/publications.html">Publications</a>
 </div>
 
+<div class="content">
+
 <h2><font color="#0020AD"><font size=+3>Curriculum Vitae</font></font></h2><br><br> 
 
-<table>
-<tbody>
-<tr>
-<td style="width: 5cm;">
-<ul>
-<li>2021 - now <br/></li>
-</ul>
-</td>
-<td style="border-color: 000000;">PostDoc (CNRS Montpellier, France), working on "<strong>Machine-Learning Glasses"</strong> (Prof. Ludovic Berthier, Prof. Giulio Biroli)<br/></td>
-</tr>
-<tr>
-<td style="width: 5cm;">
-<ul>
-<li>2021 <br/></li>
-</ul>
-</td>
-<td style="border-color: 000000;">JSPS Shortterm Postdoctoral Fellow (Kyoto University, Japan), working on "<strong>Active Particles in Viscoelastic Media"</strong> (Prof. Ryoichi Yamamoto)<br/></td>
-</tr>
-<tr>
-<td style="width: 5cm;">
-<ul>
-<li>2019 - 2021<br/></li>
-</ul>
-</td>
-<td style="border-color: 000000;">PostDoc (UIBK Innsbruck, Austria), working on "<strong>Dense Liquids and Glasses in Confinement</strong>" (Prof. Thomas Franosch)<br/></td>
-</tr>
-<tr>
-<td>
-<ul>
-<li>2018</li>
-</ul>
-</td>
-<td>Visiting PostDoc (Durham University, UK), working on "<strong>Slip and Yielding in Soft Glassy Materials</strong>" (Prof. Suzanne Fielding)</td>
-</tr>
-<tr>
-<td>
-<ul>
-<li>2014 - 2018</li>
-</ul>
-</td>
-<td>Fast-Track PhD (JGU Mainz, Germany), Thesis: “<strong>Coarse-Graining Frequency-Dependent Phenomena and Memory in Soft Matter Systems</strong>” (Prof. Friederike Schmid)</td>
-</tr>
-<tr>
-<td>
-<ul>
-<li>2014</li>
-</ul>
-</td>
-<td>Bachelor of Science (Physics, JGU Mainz, Germany), Thesis: “<strong>Phase Diagrams of Model Lipid Bilayers</strong>”</td>
-</tr>
-</tbody>
-</table>
+
+<iframe src="../pdf/cv_main.pdf" height=700px width="100%"></iframe>
+
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 
 </body>
 </html>
