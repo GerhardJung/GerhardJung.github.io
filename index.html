@@ -44,15 +44,34 @@ td {
   list-style: none;
 }
 
+.flex-itemHEAD {
+  background: white;
+  padding: 5px;
+  width: 200px;
+  height: 800px;
+  margin-top: 20px;
+  color: black;
+  word-wrap: break-word
+}
+
 .flex-item {
   background: white;
   padding: 5px;
-  width: 600px;
+  width: 500px;
   height: 550px;
   margin-top: 20px;
   line-height: 45px;
   color: black;
-  text-align: center;
+}
+
+.flex-item2 {
+  background: white;
+  padding: 5px;
+  width: 600px;
+  height: 350px;
+  margin-top: 20px;
+  line-height: 45px;
+  color: black;
 }
 
 #navbar {
@@ -106,9 +125,8 @@ td {
 <br><br>
 
 <div class="content">
-<center><table><tr>
+<ul class="flex-container"> <li class="flex-itemHEADER">
 
-<td> 
 <br><br>
 <b><font color="#0020AD"><font size=+4>Gerhard Jung</font></font></b>  
 <br>
@@ -120,38 +138,50 @@ td {
 <br>  34095 Montpellier Cedex 5, France
 <br><br>Collaborator of the Simons Collaboration on <a href="https://scglass.uchicago.edu/">Cracking the 
 Glass Problem</a>
-</td>
+</li>
 
-<td><img SRC="/pictures/jung_gerhard.jpg" height=350 align=right></td>
+<li class="flex-itemHEADER"><br><br><img SRC="./pictures/jung_gerhard.jpg" height=450 align=right></li>
 
-</tr></table></center>
+<li class="flex-itemHEADER">
+<div id="textbox" style="width:500px; height:630px;">
+<br><br>I received my Ph.D. in Physics from the University of Mainz (Germany) under the supervision of Prof. Friederike Schmid in 2018. The focus of my research was on dynamic coarse-graining, non-Markovian dynamics and memory effects.
+
+<br><br>After my Ph.D., I joined the group of Prof. Suzanne Fielding at Durham University (U.K.) as a short-term visiting researcher to study soft-glassy materials. Subsequently, I worked for two years as a postdoc in the Bio-Nano Physics group of Prof. Thomas Franosch in Innsbruck (Austria) where my research focused on glass transition in confinement. In 2021, I was awarded a short-term JSPS fellowship and collaborated for several months with Prof. Ryoichi Yamamoto in Kyoto (Japan) on active particles in viscoelastic environments.<br>
+<br>
+Since October 2021 I am member of the Simon's Collaboration on "Cracking The Glass Problem". Under the supervision of Prof. Ludovic Berthier (CNRS Montpellier, France) and Giulio Biroli (ENS Paris, France) I am using computer simulations and machine-learning techniques to unravel hidden links between the amorphous structure and structural relaxation in supercooled liquids and glasses.
+</div>
+
+
+  </li>
+
+</ul>
 
 <br>
 <br>
-<div style = "position:absolute; left:60px;"><b><font color="#0020AD"><font size=+3>Research Interests</font></font></b></div>  
+<b><font color="#0020AD"><font size=+3>Research Interests</font></font></b>
 <br> <br><br>
 
 
 <ul class="flex-container">
  <li class="flex-item">
   	<a href="/html/projects.html#GT"><b><font color="#0020AD"><font size=+1>Glass Transition</font></font></b></a> 
-	<div style="text-align: center;"><img SRC="/pictures/glass.png" width=440></div>
+	<div style="text-align: center;"><img SRC="./pictures/glass.png" width=440></div>
 	Source: Snapshot with <a href="https://www.ovito.org/"><font color="#0020AD"><font size=+0>Ovito</font></font></a>
  </li>
- <li class="flex-item"><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Dynamic Coarse-Graining</font></font></b></a> 
-	<img SRC="/pictures/gld.png" width=590> 
+ <li class="flex-item2"><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Dynamic Coarse-Graining</font></font></b></a> 
+	<img SRC="./pictures/gld.png" width=500> 
 </li>
- <li class="flex-item"><a href="/html/projects.html#CONFINE"><b><font color="#0020AD"><font size=+1>Confinement</font></font></b></a> <br><br> 
-<img SRC="/pictures/slit.png" width=590 ><br>  
+ <li class="flex-item2"><a href="/html/projects.html#CONFINE"><b><font color="#0020AD"><font size=+1>Confinement</font></font></b></a> <br><br> 
+<img SRC="./pictures/slit.png" width=500 ><br>  
 <strong>Source</strong>: Snapshot with <a href="http://dynamomd.org/">Dynamo</a>
 </li>
- <li class="flex-item"><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Non-Markovian Dynamics</font></font></b></a> <br><br> 
-<img SRC="/pictures/backflow_animation.gif" width=590><br>  <br>  
+ <li class="flex-item2"><a href="/html/projects.html#NMD"><b><font color="#0020AD"><font size=+1>Non-Markovian Dynamics</font></font></b></a> <br><br> 
+<img SRC="./pictures/backflow_animation.gif" width=500><br>  <br>  
 </li>
  <li class="flex-item"><a href="/html/projects.html#NED"><b><font color="#0020AD"><font size=+1>Non-Equilibrium Dynamics</font></font></b></a> <br><br> 
-<img SRC="/pictures/FDT.png" width=450>
+<img SRC="./pictures/FDT.png" width=450>
 </li>
- <li class="flex-item"><b><font color="#0020AD"><font size=+1>Other Topics</font></font></b>  <br><br> 
+ <li class="flex-item2"><b><font color="#0020AD"><font size=+1>Other Topics</font></font></b>  <br><br> 
 <ul>
   <li>Fluctuation-Dissipation Theorems</li>
   <li>Hydrodynamics</li>
@@ -163,7 +193,7 @@ Glass Problem</a>
 
 <br><br>
 
-<div style = "position:absolute; left:60px;"><b><font color="#0020AD"><font size=+3>Recent Publications</font></font></b>   </div>  <br><br>
+<b><font color="#0020AD"><font size=+3>Recent Publications</font></font></b>     <br><br>
 <div style = "position:absolute; left:60px;"><ul>
   <li>G. Jung<br><em> Non-Markovian systems out of equilibrium: Exact results for two routes of coarse graining</em><br> <a href="https://iopscience.iop.org/article/10.1088/1361-648X/ac56a7/pdf">https://doi.org/10.1088/1361-648X/ac56a7</a>
   </li><br>
@@ -171,7 +201,7 @@ Glass Problem</a>
   </li><br>
     <li>G. Jung, F. Schmid<br><em> Fluctuation-dissipation relations far from equilibrium: A case study (Open Access)</em><br> <a href="10.1039/D1SM00521A">10.1039/D1SM00521A</a>
   </li><br>
-</ul>   </div>  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</ul>   </div>  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <center>
 <q><font size=+2><i>Isn't it a noble and enlightened way of spending our brief time in the sun
