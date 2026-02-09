@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.20)  26 MAR 2024 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.20)  9 FEB 2026 09:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1292,18 +1292,29 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 11.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 23.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 57.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 61.
  [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (24.939pt too wide) in paragraph at lines 112--118
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 8
+6.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+Overfull \hbox (24.939pt too wide) in paragraph at lines 119--125
 [] 
  []
 
-[2] [3]) [4] 
+[2]
+Overfull \hbox (4.17763pt too wide) in paragraph at lines 136--137
+\T1/phv/m/n/10.95 Physics, Jour-nal of Chem-i-cal Physics, Eu-ro-physics Let-te
+rs, Phys-i-cal Re-view E, Jour-nal of Sta-tis-ti-cal Physics,
+ []
+
+) [3] 
 AED: lastpage setting LastPage
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
@@ -1317,11 +1328,11 @@ Package logreq Info: Writing requests to 'cv_main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28980 strings out of 481239
- 546321 string characters out of 5920377
- 1033943 words of memory out of 5000000
- 43637 multiletter control sequences out of 15000+600000
- 584238 words of font info for 75 fonts, out of 8000000 for 9000
+ 28978 strings out of 481239
+ 546506 string characters out of 5920377
+ 1035942 words of memory out of 5000000
+ 43663 multiletter control sequences out of 15000+600000
+ 584551 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,10n,69p,817b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
@@ -1329,10 +1340,10 @@ fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on cv_main.pdf (4 pages, 65109 bytes).
+Output written on cv_main.pdf (3 pages, 56750 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 36 named destinations out of 1000 (max. 500000)
+ 48 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
